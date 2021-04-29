@@ -1,3 +1,5 @@
+const saveRecord = require("idb.js")
+
 let transactions = [];
 let myChart;
 
@@ -136,6 +138,8 @@ function sendTransaction(isAdding) {
   })
   .catch(err => {
     // fetch failed, so save in indexed db
+    console.log(err)
+    console.log("here")
     saveRecord(transaction);
 
     // clear form
