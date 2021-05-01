@@ -1,5 +1,3 @@
-const saveRecord = require("idb.js")
-
 let transactions = [];
 let myChart;
 
